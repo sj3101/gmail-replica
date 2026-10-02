@@ -1,0 +1,48 @@
+Prompt 1:
+Create the React + Vite + JavaScript project for the Gmail replica based on the requirements below.
+Set up:
+1. React Router v7
+2. Tailwind CSS v4
+3. shadcn/ui
+4. Lucide React
+5. React-Toastify
+Create the `src` folder structure with:
+`api`, `components`, `hooks`, `lib`, `pages`, `constants`, `utils`, `data`.
+Create the route constants, folder constants, mock email data with around 20 emails, and the basic application routing/layout.
+Do not implement detailed functionality yet. First make sure the project runs correctly with `npm run dev` and the routing/layout foundation is working.
+Do not add unnecessary dependencies or backend/API integration.
+
+Prompt 2:
+Now implement the main Gmail interface using the existing project structure. Do not recreate the project or change the existing setup.
+Create:
+1. Gmail-style navbar with logo, sidebar toggle, search bar, help, settings, apps icon and avatar
+2. Collapsible left sidebar with Compose, Inbox, Starred, Snoozed, Sent, Drafts, Important, Spam and Trash
+3. Inbox email toolbar
+4. Reusable EmailList and EmailListItem components
+5. Gmail-style email rows with checkbox, star, sender, subject, preview and timestamp
+6. unread/read styling
+7. hover states and responsive behaviour
+8. empty state for folders with no emails
+Use the existing mock email data.
+Keep the UI visually close to Gmail while keeping the implementation simple.
+Do not implement search, compose or advanced email actions yet. Focus only on the layout, navigation and email-list UI.
+
+Prompt 3:
+Now implement the core email functionality using the existing components and `useEmails` hook.
+Implement:
+1. Search by sender, subject and body using `/search?q={{searchText}}`.
+2. Clicking an email opens `/email/:emailId`.
+3. Opening an unread email marks it as read.
+4. Star/unstar emails.
+5. Mark read/unread.
+6. Archive emails.
+7. Move emails to Trash and restore them.
+8. Mark emails as Spam.
+9. Select multiple emails and support bulk delete/archive/read-unread actions.
+10. Compose email using a Gmail-style modal/window.
+11. Send should simulate sending and add the email to Sent.
+12. Closing an unsent compose window should save it to Drafts.
+13. Persist all email changes using localStorage.
+14. Show React-Toastify success/error messages.
+Reuse the existing layout and components. Do not redesign the application or introduce new state-management libraries.
+After implementing, run the application and fix only actual compilation/runtime errors.
